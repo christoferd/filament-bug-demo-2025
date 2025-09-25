@@ -53,9 +53,27 @@ class CustomerForm
                                            fn(Action $action) => $action->requiresConfirmation(),
                                        )
                                        // Layout
-                                           ->columns(3)
+                                           ->columns(3),
                                ]
-                           )->columnSpan(3),
+                           )->columnSpan(3)
+                    ,
+
+                    // Chris D. 25-Sep-2025
+                    Section::make('Bug Test')
+                           ->description('Issue: Fieldset inlineLabel SelectInput not middle vertical aligned.')
+                           ->schema(
+                               [
+                                   Fieldset::make('Testing')->schema([
+                                                                         TextInput::make('Test')->default('Hello'),
+                                                                         Select::make('SelectOption')->options(['One', 'Two', 'Three', 'Four', 'Five', 'Six'])
+                                                                               ->required(),
+                                                                     ])->inlineLabel()
+                                           ->columns(3)
+                                           ->columnSpanFull(),
+                               ]
+                           )->columnSpanFull()
+                    ,
+
                 ]
             );
     }
