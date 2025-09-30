@@ -18,7 +18,7 @@ class CustomerFactory extends Factory
     {
         $addresses = [];
         // Create 1-2 records per customer
-        $numContacts = fake()->numberBetween(1, 2);
+        $numContacts = fake()->numberBetween(2, 3);
         for($i = 1; $i <= $numContacts; $i++)
         {
             $addresses[] = (new AddressFactory())->definition();
