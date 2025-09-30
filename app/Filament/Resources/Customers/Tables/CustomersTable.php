@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources\Customers\Tables;
 
+use App\Filament\Tables\Columns\SelectHtmlOptionsColumn;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
@@ -20,6 +21,9 @@ class CustomersTable
                                     ->label('ID')
                                     ->sortable()
                                     ->searchable(),
+
+                          SelectHtmlOptionsColumn::make('status_id'),
+
                           TextColumn::make('company_name')
                                     ->searchable(),
                           TextColumn::make('first_name')

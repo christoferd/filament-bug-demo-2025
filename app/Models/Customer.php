@@ -13,6 +13,7 @@ class Customer extends Model
     protected $table = 'customer';
 
     protected $fillable = [
+        'status_id',
         'first_name',
         'last_name',
         'shipping_addresses', // JSON,

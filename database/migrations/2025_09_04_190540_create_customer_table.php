@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('customer', function(Blueprint $table)
         {
             $table->id();
+            $table->integer('status_id')->default(1)->unsigned()->index();
             $table->string('first_name')->nullable()->default('')->index();
             $table->string('last_name')->nullable()->default('')->index();
             $table->json('shipping_addresses')->nullable()->index('shipping_addresses');

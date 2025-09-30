@@ -25,9 +25,10 @@ class CustomerFactory extends Factory
         }
 
         return [
-            'first_name'              => fake()->firstName(),
-            'last_name'               => fake()->lastName(),
-            'shipping_addresses'      => $addresses,
+            'status_id'          => rand(1, 20),
+            'first_name'         => fake()->firstName(),
+            'last_name'          => fake()->lastName(),
+            'shipping_addresses' => $addresses,
         ];
     }
 }
