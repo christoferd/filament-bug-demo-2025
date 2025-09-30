@@ -11,9 +11,7 @@ class SelectHtmlOptionsColumn extends Column
 
     public function render(): View
     {
-        return parent::render()
-            // ->with(['record'   => $this->getRecord(),])
-            ;
+        return parent::render(); //->with(['record'   => $this->getRecord(),]);
     }
 
 }
